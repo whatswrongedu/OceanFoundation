@@ -1,4 +1,4 @@
-package com.crud.ocean.app;
+package com.crud.ocean.app.config;
 
 import javax.sql.DataSource;
 
