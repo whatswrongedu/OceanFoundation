@@ -13,6 +13,7 @@ public class Disciplina implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDisciplina;
     private String nome;
+    private String dia;
 
     public Disciplina() {
 
@@ -24,5 +25,13 @@ public class Disciplina implements Serializable {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+       public String getDia() {
+        return this.dia;
+    }
+
+    public void setDia(String dia) {
+        this.nome = dia;
     }
 }
