@@ -20,7 +20,13 @@ public class Aviso implements Serializable {
     public Aviso() {
 
     }
+   public int getIdAviso() {
+        return idAviso;
+    }
 
+    public void setIdAviso(int idAviso) {
+        this.idAviso = idAviso;
+    }
     public Professor getProfessor() {
         return this.professor;
     }

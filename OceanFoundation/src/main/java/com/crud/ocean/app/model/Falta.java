@@ -21,6 +21,7 @@ public class Falta implements Serializable {
     private Disciplina disciplina;
     private LocalDate data;
     private String justificativa;
+    private boolean abonada = false;
 
     public Falta() {
 
@@ -56,5 +57,13 @@ public class Falta implements Serializable {
 
     public void setJustificativa(String justificativa) {
         this.justificativa = justificativa;
+    }
+
+    public boolean getAbonada() {
+        return this.abonada;
+    }
+
+    public void setAbonada(boolean abonada) {
+        this.abonada = abonada;
     }
 }

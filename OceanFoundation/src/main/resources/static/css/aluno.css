@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+/* fonte Montserrat do Google Fonts */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url('https://cdn.flixel.com/flixel/58m5gu9vt9tbx9flqbmg.gif?v=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}

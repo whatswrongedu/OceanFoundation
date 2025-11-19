@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Login - Portal Ocean</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/aluno.css">
+
+</head>
+
+<body class="bg-black text-white font-bold">
+
+    <main class="flex flex-col justify-center items-center min-h-screen text-center px-4 pt-[80px]">
+
+        <div class="w-full max-w-md bg-black/50 backdrop-blur-md p-8 rounded-xl shadow-lg border border-white/20">
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">Acesso ao Portal</h2>
+
+            <div th:if="${param.error}" class="bg-red-800 text-white px-4 py-3 rounded mb-4 text-sm font-normal">
+                Email ou senha inválidos.
+            </div>
+            <div th:if="${param.sucesso}" class="bg-green-800 text-white px-4 py-3 rounded mb-4 text-sm font-normal">
+                Cadastro realizado! Faça login.
+            </div>
+            <div th:if="${param.logout}" class="bg-blue-800 text-white px-4 py-3 rounded mb-4 text-sm font-normal">
+                Você saiu do sistema.
+            </div>
+
+            <form th:action="@{/login}" method="post">
+                <div class="mb-4">
+                    <label class="block mb-2 text-gray-400 font-normal text-sm">Email</label>
+                    <input type="email" name="username"
+                        class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out border border-white/20 bg-black/30 backdrop-blur-md focus:outline-none focus:border-white/60 focus:ring-2 focus:ring-white/30"
+                        required>
+                </div>
+                <div class="mb-6">
+                    <label class="block mb-2 text-gray-400 font-normal text-sm">Senha</label>
+                    <input type="password" name="password"
+                        class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out border border-white/20 bg-black/30 backdrop-blur-md focus:outline-none focus:border-white/60 focus:ring-2 focus:ring-white/30"
+                        required>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button
+                        class="w-full py-3.5 px-5 text-base rounded-lg border border-white/80 bg-black/30 backdrop-blur-md text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                        type="submit">
+                        Entrar
+                    </button>
+                </div>
+            </form>
+
+            <div class="mt-6 text-center text-sm">
+                <p class="text-gray-400 font-normal">Não tem conta?</p>
+                <a th:href="@{/cadastro/aluno}" class="text-white hover:text-gray-300 font-bold underline">Cadastrar
+                    Aluno</a>
+                <span class="text-gray-500">|</span>
+                <a th:href="@{/cadastro/professor}" class="text-white hover:text-gray-300 font-bold underline">Cadastrar
+                    Professor</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
