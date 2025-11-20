@@ -27,6 +27,15 @@ public class Falta implements Serializable {
 
     }
 
+
+    public int getIdFalta() {
+        return this.idFalta;
+    }
+
+    public void setIdFalta(int idFalta) {
+        this.idFalta = idFalta;
+    }
+
     public Aluno getAluno() {
         return this.aluno;
     }
@@ -59,6 +68,10 @@ public class Falta implements Serializable {
         this.justificativa = justificativa;
     }
 
+    public boolean isAbonada() {
+        return this.abonada;
+    }
+
     public boolean getAbonada() {
         return this.abonada;
     }
@@ -66,4 +79,5 @@ public class Falta implements Serializable {
     public void setAbonada(boolean abonada) {
         this.abonada = abonada;
     }
+
 }

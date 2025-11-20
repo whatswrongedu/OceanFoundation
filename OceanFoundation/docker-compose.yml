@@ -1,0 +1,35 @@
+services:
+  ocean-db:
+    image: mysql:8.0
+    container_name: ocean-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: teste
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # NOVO: O MySQL avisa quando está pronto
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  ocean-app:
+    build: .
+    container_name: ocean-app
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    depends_on:
+      ocean-db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://ocean-db:3306/teste
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
+volumes:
+  mysql_data:

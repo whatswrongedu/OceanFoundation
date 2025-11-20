@@ -9,39 +9,10 @@
 }
 
 body {
-  background-color: black;
-}
-
-.container {
-  height: 100vh;
-  overflow: hidden;
-  overflow-y: auto;
-  perspective: 3px;
-}
-
-section {
-  background-size: cover;
-  color: white;
-  background-color: var(--bg, --color-black);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-section.image {
-  background-position: center center;
-  transform: translateZ(-1px) scale(1.5);
-  background-size: cover;
-  z-index: -1;
-  height: 100vh;
-}
-
-section.text {
-  height: 50vh;
-}
-
-section.heading {
-  z-index: -1;
-  transform: translateY(-30vh) translateZ(1px) scale(1.5);
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('https://cdn.flixel.com/flixel/58m5gu9vt9tbx9flqbmg.gif?v=1');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
