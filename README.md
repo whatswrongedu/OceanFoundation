@@ -24,7 +24,7 @@ O objetivo principal deste projeto foi criar uma arquitetura segura e escalável
 
 ## 🧠 Arquitetura e Segurança
 
-Um dos grandes diferenciais deste projeto é a implementação rigorosa de segurança e boas práticas de desenvolvimento Back-End.
+Um dos grandes diferenciais deste projeto é a implementação de segurança e boas práticas de desenvolvimento Back-End.
 
 ### 🔐 Segurança com Spring Security
 A autenticação não é apenas um login simples. O sistema implementa **RBAC (Role-Based Access Control)**, garantindo que usuários tenham permissões estritas baseadas em seus papéis:
@@ -44,11 +44,11 @@ O código segue o padrão **Model-View-Controller**, garantindo uma separação 
 
 Este projeto foi construído utilizando o ecossistema moderno do Java:
 
-* **Core:** Java 17 & Spring Boot 3
+* **Core:** Java 17 & Spring Boot 4
 * **Segurança:** Spring Security
 * **Dados:** MySQL & Spring Data JPA
-* **Front-End:** Thymeleaf & Bootstrap (Server-Side Rendering)
-* **Ferramentas:** Maven, Docker (Opcional)
+* **Front-End:** Thymeleaf & Tailwind (Server-Side Rendering)
+* **Ferramentas:** Maven, Docker
 
 ---
 
