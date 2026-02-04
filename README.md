@@ -58,4 +58,4 @@ Se você deseja explorar o código ou rodar a aplicação em sua máquina:
 
 1. **Clone este repositório**
    ```bash
-   git clone [https://github.com/seu-usuario/ocean-foundation.git](https://github.com/seu-usuario/ocean-foundation.git)
+   git clone [https://github.com/whatswrongedu/ocean-foundation.git](https://github.com/whatswrongedu/ocean-foundation.git)
